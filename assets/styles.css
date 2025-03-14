@@ -1,5 +1,7 @@
 body {
     font-family: 'Arial', sans-serif;
+    margin: 0; /* Supprimer la marge par défaut du body */
+    padding: 0; /* Supprimer le padding par défaut du body */
 }
 
 .hero-section {
@@ -8,6 +10,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
+    padding: 1rem; /* Ajouter un padding pour éviter que le contenu soit collé aux bords */
 }
 
 .hero-section::before {
@@ -24,6 +27,7 @@ body {
 .hero-section > div {
     position: relative;
     z-index: 2;
+    padding: 1rem; /* Ajouter un padding pour éviter que le contenu soit collé aux bords */
 }
 
 .mobile-menu {
@@ -96,7 +100,7 @@ body {
 .timeline {
     position: relative;
     max-width: 800px;
-    margin: 0 auto;
+    margin: 0 auto; /* Centrer la timeline */
     padding: 30px 0;
 }
 
@@ -173,8 +177,12 @@ body {
 
 /* Styles pour les petits écrans (moins de 640px) */
 @media (max-width: 639px) {
+    html, body {
+        overflow-x: hidden; /* Désactiver le défilement horizontal */
+    }
+
     .timeline {
-        padding: 0;
+        padding: 1rem; /* Ajouter un padding pour éviter que le contenu soit collé aux bords */
     }
 
     .timeline::after {
@@ -188,6 +196,7 @@ body {
         border-radius: 0.5rem;
         box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
         margin-bottom: 1.5rem;
+        text-align: center; /* Centrer le texte */
     }
 
     .event.left,
@@ -208,32 +217,25 @@ body {
         font-size: 0.875rem; /* Taille de police réduite */
         color: #4b5563; /* Couleur de texte grise */
     }
-}
 
-/* Supprimer l'espace sur les petits écrans */
-@media (max-width: 639px) {
-    html, body {
-        overflow-x: hidden; /* Désactiver le défilement horizontal */
+    .hero-section {
+        padding: 1rem; /* Ajouter un padding pour éviter que le contenu soit collé aux bords */
     }
 
     .container-contact, .timeline, .event, .blog-card, .hero-section {
         max-width: 100%; /* Limiter la largeur à 100% */
-        margin: 0; /* Supprimer les marges */
-        padding: 0; /* Supprimer les paddings */
+        margin: 0 auto; /* Centrer les éléments */
+        padding: 1rem; /* Ajouter un padding pour éviter que le contenu soit collé aux bords */
         box-sizing: border-box; /* Inclure les paddings et bordures dans la largeur */
     }
 
-    .event {
-        padding: 1rem; /* Réduire le padding sur les petits écrans */
-        margin: 0;
-    }
-
-    .timeline {
-        padding: 0;
-    }
-
-    .hero-section {
-        padding: 0;
+    /* Centrer le contenu des cartes */
+    .blog-card {
+        text-align: center; /* Centrer le texte */
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centrer les éléments horizontalement */
+        justify-content: center; /* Centrer les éléments verticalement */
     }
 }
 
