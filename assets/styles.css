@@ -4,15 +4,6 @@ body {
     padding: 0; /* Supprimer le padding par défaut du body */
 }
 
-.hero-section {
-    background-image: url('assets/images/gallery1.jpg'); /* Remplacez par le chemin de votre image */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: relative;
-    padding: 1rem; /* Ajouter un padding pour éviter que le contenu soit collé aux bords */
-}
-
 .hero-section::before {
     content: '';
     position: absolute;
@@ -22,6 +13,23 @@ body {
     bottom: 0;
     background: rgba(0, 0, 0, 0.5); /* Overlay sombre pour améliorer la lisibilité du texte */
     z-index: 1;
+}
+
+.blog-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.hidden {
+    display: none;
+}
+
+#voir-plus {
+    transition: background-color 0.3s ease;
 }
 
 .hero-section > div {

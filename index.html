@@ -15,7 +15,7 @@
         <div class="menu-icon cursor-pointer md:hidden" id="menu-btn">
             <i class="fas fa-bars"></i>
         </div>
-        <nav class="nav-links hidden md:flex space-x-4" id="navbar">
+        <nav class="nav-links md:flex space-x-4" id="navbar">
             <a href="#about-container" class="hover:underline">À propos</a>
             <a href="#career" class="hover:underline">Carrière</a>
             <a href="#blogs" class="hover:underline">Blogs</a>
@@ -25,7 +25,7 @@
     </header>
 
     <!-- Mobile Menu -->
-    <div class="mobile-menu hidden md:hidden bg-blue-600 text-white p-4 z-10 fixed w-full top-16" id="mobile-menu">
+    <div class="mobile-menu hidden md:hidden bg-blue-600 text-white p-4 z-5 fixed w-full top-16" id="mobile-menu">
         <nav class="flex flex-col space-y-2">
             <a href="#about-container" class="hover:underline">À propos</a>
             <a href="#career" class="hover:underline">Carrière</a>
@@ -138,115 +138,98 @@
     </section>
 
     <!-- Career Section -->
-    <section class="career py-10 bg-gray-50" id="career">
-        <h1 class="text-3xl sm:text-4xl font-bold text-center mb-10">MON PARCOURS</h1>
-        <section class="timeline">
-            <!-- Événement 1 : Mes débuts -->
-            <div class="event left py-10 scroll slide-left">
-                <h2 class="text-2xl font-semibold">Mes débuts</h2>
-                <span class="text-gray-500">2012-2016</span>
-                <p>
-                    Mon intérêt pour l'informatique a commencé dès mon plus jeune âge. Je passais des heures dans le bureau de mon père à explorer son ordinateur, à jouer à des jeux et à apprendre son fonctionnement. Ces moments m'ont permis de découvrir un univers à la fois amusant et fascinant. J'adorais l'aider dans ses tâches informatiques, ce qui a renforcé ma passion pour ce domaine.
-                </p>
-            </div>
-    
-            <!-- Événement 2 : Le collège -->
-            <div class="event right py-10 scroll slide-right">
-                <h2 class="text-2xl font-semibold">Le collège</h2>
-                <span class="text-gray-500">2017-2020</span>
-                <p>
-                    Au collège, je me suis intéressé aux téléphones portables. On me laissait jouer à des jeux, et j'ai commencé à comprendre leur fonctionnement. Lorsqu'il y avait un problème avec le téléphone d'un parent ou d'un voisin, on faisait appel à moi pour le résoudre. Ces expériences m'ont motivé à approfondir mes connaissances et à chercher des solutions par moi-même.
-                </p>
-            </div>
-    
-            <!-- Événement 3 : Le lycée -->
-            <div class="event left py-10 scroll slide-left">
-                <h2 class="text-2xl font-semibold">Le lycée</h2>
-                <span class="text-gray-500">2021-2023</span>
-                <p>
-                    Au lycée, notre professeur de mathématiques nous encourageait à utiliser la salle d'informatique pour nous familiariser avec les ordinateurs. J'ai également aidé à saisir les notes des élèves du collège. Ces expériences m'ont convaincu de choisir l'informatique à l'université. Comme le disait notre professeur : <strong>"Rien n'est impossible en informatique"</strong>. Cette phrase est devenue une source d'inspiration pour moi.
-                </p>
-            </div>
-    
-            <!-- Événement 4 : L'université -->
-            <div class="event right py-10 scroll slide-right">
-                <h2 class="text-2xl font-semibold">L'université</h2>
-                <span class="text-gray-500">2023 - Aujourd'hui</span>
-                <p>
-                    Actuellement en licence professionnelle en Cybersécurité et développement web et mobile, je continue d'explorer ce vaste domaine. J'ai acquis des compétences en programmation, en gestion de bases de données et en sécurité informatique. Chaque projet est une nouvelle opportunité d'apprendre et de grandir dans ce domaine passionnant.
-                </p>
-            </div>
-        </section>
-    </section>
-
-    <!-- Blog Section -->
     <section class="blog-section py-20 bg-gray-50" id="blogs">
         <div class="container mx-auto px-4">
             <h1 class="text-4xl font-bold text-center mb-10">Blog</h1>
             <p class="text-center mb-10">Découvrez mes projets en développement et en réseau.</p>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
                 <!-- Projet 1 : Développement -->
-                <div class="blog-card bg-gray-180 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-                    <img src="assets/images/portfolio.png" alt="Projet Développement 1" class="w-full h-48 object-cover rounded-t-lg">
-                    <h3 class="text-xl font-semibold mt-4">Création d'un Portfolio</h3>
-                    <p class="mt-2 text-gray-600">Un portfolio moderne et responsive pour présenter mes compétences en développement web.</p>
+                <div class="blog-card bg-white p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                    <img src="assets/images/portfolio.png" alt="Projet Développement 1" class="w-full h-32 object-cover rounded-t-lg">
+                    <h3 class="text-lg font-semibold mt-4">Création d'un Portfolio</h3>
+                    <p class="mt-2 text-sm text-gray-600">Un portfolio moderne et responsive pour présenter mes compétences en développement web.</p>
                     <div class="mt-4">
-                        <a href="https://github.com/Dak6000/PortFolio-dak" class="text-blue-600 hover:underline">Voir le projet</a>
+                        <a href="https://github.com/Dak6000/PortFolio-dak" class="text-blue-600 hover:underline text-sm">Voir le projet</a>
                     </div>
                 </div>
-
+    
                 <!-- Projet 2 : Réseau -->
-                <div class="blog-card bg-gray-180 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-                    <img src="assets/images/local.jpg" alt="Projet Réseau 1" class="w-full h-48 object-cover rounded-t-lg">
-                    <h3 class="text-xl font-semibold mt-4">Configuration d'un réseau local</h3>
-                    <p class="mt-2 text-gray-600">Mise en place d'un réseau local sécurisé avec des routeurs et des commutateurs.</p>
+                <div class="blog-card bg-white p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                    <img src="assets/images/local.jpg" alt="Projet Réseau 1" class="w-full h-32 object-cover rounded-t-lg">
+                    <h3 class="text-lg font-semibold mt-4">Configuration d'un réseau local</h3>
+                    <p class="mt-2 text-sm text-gray-600">Mise en place d'un réseau local sécurisé avec des routeurs et des commutateurs.</p>
                     <div class="mt-4">
-                        <a href="#" class="text-blue-600 hover:underline">Lire l'article</a>
+                        <a href="#" class="text-blue-600 hover:underline text-sm">Lire l'article</a>
                     </div>
                 </div>
-
+    
                 <!-- Projet 3 : Développement -->
-                <div class="blog-card bg-gray-180 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-                    <img src="assets/images/projet3.png" alt="Projet Développement 2" class="w-full h-48 object-cover rounded-t-lg">
-                    <h3 class="text-xl font-semibold mt-4">Application de gestion de tâches</h3>
-                    <p class="mt-2 text-gray-600">Une application web pour gérer vos tâches quotidiennes en Java.</p>
+                <div class="blog-card bg-white p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                    <img src="assets/images/projet3.png" alt="Projet Développement 2" class="w-full h-32 object-cover rounded-t-lg">
+                    <h3 class="text-lg font-semibold mt-4">Application de gestion de tâches</h3>
+                    <p class="mt-2 text-sm text-gray-600">Une application web pour gérer vos tâches quotidiennes en Java.</p>
                     <div class="mt-4">
-                        <a href="https://gitlab.com/dak9211904/gestion_ventes" class="text-blue-600 hover:underline">Voir le projet</a>
+                        <a href="https://gitlab.com/dak9211904/gestion_ventes" class="text-blue-600 hover:underline text-sm">Voir le projet</a>
                     </div>
                 </div>
-
+    
                 <!-- Projet 4 : Réseau -->
-                <div class="blog-card bg-gray-180 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-                    <img src="assets/images/wifi.jpg" alt="Projet Réseau 2" class="w-full h-48 object-cover rounded-t-lg">
-                    <h3 class="text-xl font-semibold mt-4">Sécurisation d'un réseau Wi-Fi</h3>
-                    <p class="mt-2 text-gray-600">Guide pratique pour sécuriser un réseau Wi-Fi domestique contre les intrusions.</p>
+                <div class="blog-card bg-white p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                    <img src="assets/images/wifi.jpg" alt="Projet Réseau 2" class="w-full h-32 object-cover rounded-t-lg">
+                    <h3 class="text-lg font-semibold mt-4">Sécurisation d'un réseau Wi-Fi</h3>
+                    <p class="mt-2 text-sm text-gray-600">Guide pratique pour sécuriser un réseau Wi-Fi domestique contre les intrusions.</p>
                     <div class="mt-4">
-                        <a href="#" class="text-blue-600 hover:underline">Lire l'article</a>
+                        <a href="#" class="text-blue-600 hover:underline text-sm">Lire l'article</a>
                     </div>
                 </div>
-
+    
                 <!-- Projet 5 : Développement -->
-                <div class="blog-card bg-gray-180 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-                    <a href="https://github.com/Dak6000/E-commerce"><img src="assets/images/e-commerce.png" alt="Projet Développement 3" class="w-full h-48 object-cover rounded-t-lg"></a>
-                    <h3 class="text-xl font-semibold mt-4">Site e-commerce</h3>
-                    <p class="mt-2 text-gray-600">Un site e-commerce complet avec gestion de panier et paiement en ligne.</p>
-                    <div class="mt-4">
-                        <a href="https://github.com/Dak6000/E-commerce" class="text-blue-600 hover:underline">Voir le projet</a>
-                    </div>
-                </div>
-
-                <!-- Projet 6 : Réseau -->
-                <div class="blog-card bg-gray-180 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-                    <a href="#">
-                        <img src="assets/images/warshark.jpg" alt="Projet Réseau 3" class="w-full h-48 object-cover rounded-t-lg">
+                <div class="blog-card bg-white p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                    <a href="https://github.com/Dak6000/E-commerce">
+                        <img src="assets/images/e-commerce.png" alt="Projet Développement 3" class="w-full h-32 object-cover rounded-t-lg">
                     </a>
-                    <h3 class="text-xl font-semibold mt-4">Analyse de trafic réseau</h3>
-                    <p class="mt-2 text-gray-600">Utilisation de Wireshark pour analyser et diagnostiquer des problèmes réseau.</p>
+                    <h3 class="text-lg font-semibold mt-4">Site e-commerce</h3>
+                    <p class="mt-2 text-sm text-gray-600">Un site e-commerce complet avec gestion de panier et paiement en ligne.</p>
                     <div class="mt-4">
-                        <a href="#" class="text-blue-600 hover:underline">Lire l'article</a>
+                        <a href="https://github.com/Dak6000/E-commerce" class="text-blue-600 hover:underline text-sm">Voir le projet</a>
                     </div>
                 </div>
+    
+                <!-- Projets supplémentaires (cachés initialement) -->
+                <div class="blog-card bg-white p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow hidden more-projects">
+                    <a href="#">
+                        <img src="assets/images/warshark.jpg" alt="Projet Réseau 3" class="w-full h-32 object-cover rounded-t-lg">
+                    </a>
+                    <h3 class="text-lg font-semibold mt-4">Analyse de trafic réseau</h3>
+                    <p class="mt-2 text-sm text-gray-600">Utilisation de Wireshark pour analyser et diagnostiquer des problèmes réseau.</p>
+                    <div class="mt-4">
+                        <a href="#" class="text-blue-600 hover:underline text-sm">Lire l'article</a>
+                    </div>
+                </div>
+    
+                <div class="blog-card bg-white p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow hidden more-projects">
+                    <a href="#">
+                        <img src="assets/images/processus.jpg" alt="Gestionnaire de processus" class="w-full h-32 object-cover rounded-t-lg">
+                    </a>
+                    <h3 class="text-lg font-semibold mt-4">Gestionnaire de Processus en Langage C</h3>
+                    <p class="mt-2 text-sm text-gray-600">Conception d'un gestionnaire de Processus en Langage C pour les systèmes Linux.</p>
+                    <div class="mt-4">
+                        <a href="#" class="text-blue-600 hover:underline text-sm">Lire l'article</a>
+                    </div>
+                </div>
+    
+                <!-- Ajoutez d'autres projets ici avec la classe "more-projects hidden" -->
+            </div>
+    
+            <!-- Boutons "Voir plus" et "Voir moins" -->
+            <div class="text-center mt-10">
+                <button id="voir-plus" class="bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 transition">
+                    Voir plus
+                </button>
+                <button id="voir-moins" class="bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 transition hidden">
+                    Voir moins
+                </button>
             </div>
         </div>
     </section>

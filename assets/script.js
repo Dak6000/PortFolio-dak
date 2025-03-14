@@ -28,6 +28,32 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+document.addEventListener('DOMContentLoaded', function () {
+    const voirPlusButton = document.getElementById('voir-plus');
+    const voirMoinsButton = document.getElementById('voir-moins');
+    const moreProjects = document.querySelectorAll('.more-projects');
+
+    if (voirPlusButton && voirMoinsButton && moreProjects.length > 0) {
+        // Gérer le clic sur "Voir plus"
+        voirPlusButton.addEventListener('click', function () {
+            moreProjects.forEach(project => {
+                project.classList.remove('hidden'); // Afficher les projets supplémentaires
+            });
+            voirPlusButton.classList.add('hidden'); // Masquer le bouton "Voir plus"
+            voirMoinsButton.classList.remove('hidden'); // Afficher le bouton "Voir moins"
+        });
+
+        // Gérer le clic sur "Voir moins"
+        voirMoinsButton.addEventListener('click', function () {
+            moreProjects.forEach(project => {
+                project.classList.add('hidden'); // Masquer les projets supplémentaires
+            });
+            voirMoinsButton.classList.add('hidden'); // Masquer le bouton "Voir moins"
+            voirPlusButton.classList.remove('hidden'); // Afficher le bouton "Voir plus"
+        });
+    }
+});
+
 document.addEventListener('DOMContentLoaded', function() {
     const elements = document.querySelectorAll('.scroll');
 
