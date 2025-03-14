@@ -4,6 +4,38 @@ body {
     padding: 0; /* Supprimer le padding par défaut du body */
 }
 
+/* Masquer nav-links sur les petits écrans */
+.nav-links {
+    display: none; /* Masqué par défaut */
+}
+
+/* Afficher nav-links sur les écrans moyens et grands */
+@media (min-width: 768px) {
+    .nav-links {
+        display: flex; /* Afficher en flex */
+        gap: 1rem; /* Espacement entre les liens */
+    }
+
+    #menu-btn {
+        display: none; /* Masquer l'icône du menu sur les grands écrans */
+    }
+}
+
+/* Afficher l'icône du menu sur les petits écrans */
+.menu-icon {
+    display: block; /* Afficher l'icône du menu */
+}
+
+/* Afficher le menu mobile sur les petits écrans */
+.mobile-menu {
+    display: none; /* Masqué par défaut */
+}
+
+/* JavaScript pour gérer l'affichage du menu mobile */
+#mobile-menu.active {
+    display: block; /* Afficher le menu mobile */
+}
+
 .hero-section::before {
     content: '';
     position: absolute;
@@ -36,14 +68,6 @@ body {
     position: relative;
     z-index: 2;
     padding: 1rem; /* Ajouter un padding pour éviter que le contenu soit collé aux bords */
-}
-
-.mobile-menu {
-    transition: all 0.3s ease;
-}
-
-.mobile-menu.active {
-    display: block;
 }
 
 /* Styles pour l'animation de défilement */

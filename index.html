@@ -15,20 +15,19 @@
         <div class="menu-icon cursor-pointer md:hidden" id="menu-btn">
             <i class="fas fa-bars"></i>
         </div>
-        <nav class="nav-links md:flex space-x-4" id="navbar">
+        <!-- Navbar pour les écrans moyens et grands -->
+        <nav class="nav-links" id="nav-links">
             <a href="#about-container" class="hover:underline">À propos</a>
-            <a href="#career" class="hover:underline">Carrière</a>
             <a href="#blogs" class="hover:underline">Blogs</a>
             <a href="#tech-section" class="hover:underline">Tech utilisées</a>
             <a href="#contact-section" class="hover:underline">Contact</a>
         </nav>
     </header>
-
-    <!-- Mobile Menu -->
-    <div class="mobile-menu hidden md:hidden bg-blue-600 text-white p-4 z-5 fixed w-full top-16" id="mobile-menu">
+    
+    <!-- Menu mobile pour les petits écrans -->
+    <div class="mobile-menu hidden bg-blue-600 text-white p-4 z-10 fixed w-full top-16" id="mobile-menu">
         <nav class="flex flex-col space-y-2">
             <a href="#about-container" class="hover:underline">À propos</a>
-            <a href="#career" class="hover:underline">Carrière</a>
             <a href="#blogs" class="hover:underline">Blogs</a>
             <a href="#tech-section" class="hover:underline">Tech utilisées</a>
             <a href="#contact-section" class="hover:underline">Contact</a>
@@ -383,9 +382,15 @@
 
     <script>
         // Script pour le menu burger
-        document.getElementById('menu-btn').addEventListener('click', function() {
-            var mobileMenu = document.getElementById('mobile-menu');
-            mobileMenu.classList.toggle('hidden');
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuBtn = document.getElementById('menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+        
+            if (menuBtn && mobileMenu) {
+                menuBtn.addEventListener('click', function () {
+                    mobileMenu.classList.toggle('active'); // Afficher ou masquer le menu mobile
+                });
+            }
         });
     </script>
     <script src="assets/script.js"></script>
