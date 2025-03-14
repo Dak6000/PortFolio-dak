@@ -25,7 +25,7 @@
     </header>
 
     <!-- Mobile Menu -->
-    <div class="mobile-menu hidden md:hidden bg-blue-600 text-white p-4 fixed w-full top-16" id="mobile-menu">
+    <div class="mobile-menu hidden md:hidden bg-blue-600 text-white p-4 z-10 fixed w-full top-16" id="mobile-menu">
         <nav class="flex flex-col space-y-2">
             <a href="#about-container" class="hover:underline">À propos</a>
             <a href="#career" class="hover:underline">Carrière</a>
@@ -37,16 +37,16 @@
 
     <!-- Home Section / hero-section -->
     <section class="hero-section flex flex-col items-center justify-center h-screen bg-cover bg-center" id="hero-section" style="background-image: url('assets/images/reseau1.jpg');">
-        <div class="py-20 scroll-animation">
-            <img src="assets/images/photo1.png" alt="Profile Picture" class="w-40 h-41 rounded-full mx-auto mb-2">
-            <h1 id="name" class="text-5xl font-bold flex justify-center">Abdoul Khabirou DJADJARO</h1>
-            <p class="mt-4 text-xl">Étudiant en 2ème année de licence professionnelle en Cybersécurité et développement web et mobile</p>
+        <div class="py-10 scroll-animation">
+            <img src="assets/images/photo1.png" alt="Profile Picture" class="w-40 h-41 rounded-full mx-auto">
+            <h1 id="name" class="text-5xl font-bold flex justify-center text-white">Abdoul Khabirou DJADJARO</h1>
+            <p class="mt-4 text-white flex justify-center">Étudiant en 2ème année de licence professionnelle en Cybersécurité et développement web et mobile</p>
             <div class="cta-buttons mt-8 flex justify-center">
-                <a href="#contact-section"  class="bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700 transition">Prenez contact</a>
+                <a href="#contact-section" class="bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700 transition">Prenez contact</a>
                 <a href="assets/Mon CV.pdf" class="bg-gray-300 text-gray-800 px-6 py-3 rounded hover:bg-gray-400 transition ml-4">Mon CV</a>
             </div>
         </div>
-        <div class="social-links flex justify-center space-x-6 py-5 scroll-animation">
+        <div class="social-links flex justify-center space-x-6 scroll-animation">
             <a href="https://www.fb.com/l/6lp1kJRRR" class="fab fa-facebook text-blue-600 hover:text-blue-800"></a>
             <a href="https://www.instagram.com/khabirou03?igsh=MW9ycDZuaWtjcW4ycg==" class="fab fa-instagram text-pink-600 hover:text-pink-800"></a>
             <a href="https://www.linkedin.com/in/abdoul-khabirou-djadjaro-b5b98a312" class="fab fa-linkedin text-blue-700 hover:text-blue-900"></a>
@@ -67,16 +67,20 @@
                     </p>
                 </div>
                 <!-- Image à droite -->
-                <div class="md:w-1/2">
-                    <img src="assets/images/gallery1.jpg" alt="À propos" class="w-full h-auto rounded-full shadow-full">
+                <div class="md:w-1/2 relative">
+                    <img src="assets/images/gallery1.jpg" alt="À propos" class="w-full h-auto rounded-full shadow-full opacity-75">
+                    <!-- Overlay sombre -->
+                    <div class="absolute inset-0 bg-black opacity-25 rounded-full"></div>
                 </div>
             </div>
         
             <!-- Section 2 : Image à gauche, Texte à droite -->
             <div class="flex flex-col md:flex-row items-center gap-8 mb-12 scroll slide-left">
                 <!-- Image à gauche -->
-                <div class="md:w-1/2">
-                    <img src="assets/images/web1.jpg" alt="Compétences" class="w-full h-auto rounded-full shadow-full">
+                <div class="md:w-1/2 relative">
+                    <img src="assets/images/web1.jpg" alt="Compétences" class="w-full h-auto rounded-full shadow-full opacity-75">
+                    <!-- Overlay sombre -->
+                    <div class="absolute inset-0 bg-black opacity-25 rounded-full"></div>
                 </div>
                 <!-- Texte à droite -->
                 <div class="md:w-1/2">
@@ -97,16 +101,20 @@
                     </p>
                 </div>
                 <!-- Image à droite -->
-                <div class="md:w-1/2">
-                    <img src="assets/images/reseau2.jpg" alt="Cybersécurité" class="w-full h-auto rounded-full shadow-full">
+                <div class="md:w-1/2 relative">
+                    <img src="assets/images/reseau2.jpg" alt="Cybersécurité" class="w-full h-auto rounded-full shadow-full opacity-75">
+                    <!-- Overlay sombre -->
+                    <div class="absolute inset-0 bg-black opacity-25 rounded-full"></div>
                 </div>
             </div>
         
             <!-- Section 4 : Image à gauche, Texte à droite -->
             <div class="flex flex-col md:flex-row items-center gap-8 mb-12 scroll slide-left">
                 <!-- Image à gauche -->
-                <div class="md:w-1/2">
-                    <img src="assets/images/web2.jpg" alt="Collaboration" class="w-full h-auto rounded-full shadow-full">
+                <div class="md:w-1/2 relative">
+                    <img src="assets/images/web2.jpg" alt="Collaboration" class="w-full h-auto rounded-full shadow-full opacity-75">
+                    <!-- Overlay sombre -->
+                    <div class="absolute inset-0 bg-black opacity-25 rounded-full"></div>
                 </div>
                 <!-- Texte à droite -->
                 <div class="md:w-1/2">
@@ -130,11 +138,11 @@
     </section>
 
     <!-- Career Section -->
-    <section class="career" id="career">
-        <h1 class="text-4xl font-bold text-center mb-10">MON PARCOURS</h1>
+    <section class="career py-10 bg-gray-50" id="career">
+        <h1 class="text-3xl sm:text-4xl font-bold text-center mb-10">MON PARCOURS</h1>
         <section class="timeline">
             <!-- Événement 1 : Mes débuts -->
-            <div class="event left py-20 scroll slide-left">
+            <div class="event left py-10 scroll slide-left">
                 <h2 class="text-2xl font-semibold">Mes débuts</h2>
                 <span class="text-gray-500">2012-2016</span>
                 <p>
@@ -143,7 +151,7 @@
             </div>
     
             <!-- Événement 2 : Le collège -->
-            <div class="event right py-20 scroll slide-right">
+            <div class="event right py-10 scroll slide-right">
                 <h2 class="text-2xl font-semibold">Le collège</h2>
                 <span class="text-gray-500">2017-2020</span>
                 <p>
@@ -152,7 +160,7 @@
             </div>
     
             <!-- Événement 3 : Le lycée -->
-            <div class="event left py-20 scroll slide-left">
+            <div class="event left py-10 scroll slide-left">
                 <h2 class="text-2xl font-semibold">Le lycée</h2>
                 <span class="text-gray-500">2021-2023</span>
                 <p>
@@ -160,8 +168,8 @@
                 </p>
             </div>
     
-            <!-- Événement 4 : L'université (à ajouter si pertinent) -->
-            <div class="event right py-20 scroll slide-right">
+            <!-- Événement 4 : L'université -->
+            <div class="event right py-10 scroll slide-right">
                 <h2 class="text-2xl font-semibold">L'université</h2>
                 <span class="text-gray-500">2023 - Aujourd'hui</span>
                 <p>
@@ -179,7 +187,7 @@
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- Projet 1 : Développement -->
-                <div class="blog-card bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                <div class="blog-card bg-gray-180 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
                     <img src="assets/images/portfolio.png" alt="Projet Développement 1" class="w-full h-48 object-cover rounded-t-lg">
                     <h3 class="text-xl font-semibold mt-4">Création d'un Portfolio</h3>
                     <p class="mt-2 text-gray-600">Un portfolio moderne et responsive pour présenter mes compétences en développement web.</p>
@@ -189,7 +197,7 @@
                 </div>
 
                 <!-- Projet 2 : Réseau -->
-                <div class="blog-card bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                <div class="blog-card bg-gray-180 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
                     <img src="assets/images/local.jpg" alt="Projet Réseau 1" class="w-full h-48 object-cover rounded-t-lg">
                     <h3 class="text-xl font-semibold mt-4">Configuration d'un réseau local</h3>
                     <p class="mt-2 text-gray-600">Mise en place d'un réseau local sécurisé avec des routeurs et des commutateurs.</p>
@@ -199,7 +207,7 @@
                 </div>
 
                 <!-- Projet 3 : Développement -->
-                <div class="blog-card bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                <div class="blog-card bg-gray-180 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
                     <img src="assets/images/projet3.png" alt="Projet Développement 2" class="w-full h-48 object-cover rounded-t-lg">
                     <h3 class="text-xl font-semibold mt-4">Application de gestion de tâches</h3>
                     <p class="mt-2 text-gray-600">Une application web pour gérer vos tâches quotidiennes en Java.</p>
@@ -209,7 +217,7 @@
                 </div>
 
                 <!-- Projet 4 : Réseau -->
-                <div class="blog-card bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                <div class="blog-card bg-gray-180 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
                     <img src="assets/images/wifi.jpg" alt="Projet Réseau 2" class="w-full h-48 object-cover rounded-t-lg">
                     <h3 class="text-xl font-semibold mt-4">Sécurisation d'un réseau Wi-Fi</h3>
                     <p class="mt-2 text-gray-600">Guide pratique pour sécuriser un réseau Wi-Fi domestique contre les intrusions.</p>
@@ -219,8 +227,8 @@
                 </div>
 
                 <!-- Projet 5 : Développement -->
-                <div class="blog-card bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-                    <img src="assets/images/e-commerce.png" alt="Projet Développement 3" class="w-full h-48 object-cover rounded-t-lg">
+                <div class="blog-card bg-gray-180 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                    <a href="https://github.com/Dak6000/E-commerce"><img src="assets/images/e-commerce.png" alt="Projet Développement 3" class="w-full h-48 object-cover rounded-t-lg"></a>
                     <h3 class="text-xl font-semibold mt-4">Site e-commerce</h3>
                     <p class="mt-2 text-gray-600">Un site e-commerce complet avec gestion de panier et paiement en ligne.</p>
                     <div class="mt-4">
@@ -229,8 +237,10 @@
                 </div>
 
                 <!-- Projet 6 : Réseau -->
-                <div class="blog-card bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-                    <img src="assets/images/warshark.jpg" alt="Projet Réseau 3" class="w-full h-48 object-cover rounded-t-lg">
+                <div class="blog-card bg-gray-180 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                    <a href="#">
+                        <img src="assets/images/warshark.jpg" alt="Projet Réseau 3" class="w-full h-48 object-cover rounded-t-lg">
+                    </a>
                     <h3 class="text-xl font-semibold mt-4">Analyse de trafic réseau</h3>
                     <p class="mt-2 text-gray-600">Utilisation de Wireshark pour analyser et diagnostiquer des problèmes réseau.</p>
                     <div class="mt-4">
@@ -298,39 +308,79 @@
     </section>
 
     <!-- Section Contact -->
-    <section class="contact-section py-20 scroll-animation" id="contact-section">
-        <div class="container-contact max-w-4xl mx-auto text-center">
-            <h2 class="text-4xl font-bold mb-4">Hey tout le monde!</h2>
-            <p class="text-lg text-gray-700 mb-6">Si vous avez des questions ou des projets, n'hésitez pas à me contacter. Voici quelques raisons pour lesquelles vous pourriez vouloir me joindre :</p>
+    <section class="contact-section bg-gray-200 scroll scale-up" id="contact-section">
+        <div class="container-contact max-w-6xl mx-auto px-4">
+            <!-- Titre -->
+            <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-center">Hey tout le monde!</h2>
+            <p class="text-sm sm:text-base md:text-lg text-gray-700 mb-6 text-center">Si vous avez des questions ou des projets, n'hésitez pas à me contacter. Voici quelques raisons pour lesquelles vous pourriez vouloir me joindre :</p>
     
-            <!-- Questions liées au développement -->
-            <div class="mb-8">
-                <p class="mb-4"><i class="fa-solid fa-globe text-blue-600"></i> Tu veux que je te crée des sites web ou des applications ?</p>
-                <p class="mb-4"><i class="fas fa-code text-blue-600"></i> Tu aspires à devenir développeur, mais tu ne sais pas par où commencer ?</p>
-                <p class="mb-4"><i class="fas fa-database text-blue-600"></i> Tu veux collaborer ou participer à des projets amusants ou concrets ?</p>
-            </div>
+            <div class="flex flex-col md:flex-row gap-8">
+                <!-- Section des questions -->
+                <div class="md:w-1/2">
+                    <!-- Questions liées au développement -->
+                    <div class="mb-8">
+                        <p class="mb-4 text-xs sm:text-sm md:text-base"><i class="fa-solid fa-globe text-blue-600"></i> Tu veux que je te crée des sites web ou des applications ?</p>
+                        <p class="mb-4 text-xs sm:text-sm md:text-base"><i class="fas fa-code text-blue-600"></i> Tu aspires à devenir développeur, mais tu ne sais pas par où commencer ?</p>
+                        <p class="mb-4 text-xs sm:text-sm md:text-base"><i class="fas fa-database text-blue-600"></i> Tu veux collaborer ou participer à des projets amusants ou concrets ?</p>
+                    </div>
     
-            <!-- Questions liées au réseau -->
-            <div class="mb-8">
-                <p class="mb-4"><i class="fas fa-network-wired text-blue-600"></i> Tu as besoin d'aide pour configurer ou sécuriser ton réseau ?</p>
-                <p class="mb-4"><i class="fas fa-shield-alt text-blue-600"></i> Tu veux en savoir plus sur la cybersécurité et la protection des données ?</p>
-                <p class="mb-4"><i class="fas fa-server text-blue-600"></i> Tu cherches des solutions pour optimiser ton infrastructure réseau ?</p>
-            </div>
+                    <!-- Questions liées au réseau -->
+                    <div class="mb-8">
+                        <p class="mb-4 text-xs sm:text-sm md:text-base"><i class="fas fa-network-wired text-blue-600"></i> Tu as besoin d'aide pour configurer ou sécuriser ton réseau ?</p>
+                        <p class="mb-4 text-xs sm:text-sm md:text-base"><i class="fas fa-shield-alt text-blue-600"></i> Tu veux en savoir plus sur la cybersécurité et la protection des données ?</p>
+                        <p class="mb-4 text-xs sm:text-sm md:text-base"><i class="fas fa-server text-blue-600"></i> Tu cherches des solutions pour optimiser ton infrastructure réseau ?</p>
+                    </div>
     
-            <!-- Questions générales -->
-            <div class="mb-8">
-                <p class="mb-4"><i class="fas fa-question text-blue-600"></i> Peut-être envie d'apprendre quelque chose de nouveau ou une question à poser ?</p>
+                    <!-- Questions générales -->
+                    <div class="mb-8">
+                        <p class="mb-4 text-xs sm:text-sm md:text-base"><i class="fas fa-question text-blue-600"></i> Peut-être envie d'apprendre quelque chose de nouveau ou une question à poser ?</p>
+                    </div>
+                </div>
+    
+                <!-- Formulaire de contact -->
+                <div class="md:w-1/2">
+                    <form id="contact-form" class="bg-white p-4 sm:p-6 rounded-lg shadow-md">
+                        <h3 class="text-lg sm:text-xl font-semibold mb-4">Envoyez-moi un message</h3>
+    
+                        <!-- Champ Nom -->
+                        <div class="mb-4">
+                            <label for="name" class="block text-xs sm:text-sm font-medium text-gray-700">Nom</label>
+                            <input type="text" id="name" name="name" required
+                                class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 text-xs sm:text-sm">
+                        </div>
+    
+                        <!-- Champ Email -->
+                        <div class="mb-4">
+                            <label for="email" class="block text-xs sm:text-sm font-medium text-gray-700">Email</label>
+                            <input type="email" id="email" name="email" required
+                                class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 text-xs sm:text-sm">
+                        </div>
+    
+                        <!-- Champ Message -->
+                        <div class="mb-4">
+                            <label for="message" class="block text-xs sm:text-sm font-medium text-gray-700">Message</label>
+                            <textarea id="message" name="message" rows="4" required
+                                class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 text-xs sm:text-sm"></textarea>
+                        </div>
+    
+                        <!-- Bouton d'envoi -->
+                        <button type="submit"
+                            class="w-full bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition text-xs sm:text-sm">
+                            Envoyer
+                        </button>
+                    </form>
+                </div>
             </div>
     
             <!-- Coordonnées de contact -->
-            <div class="cord-contact mt-10">
-                <div class="box bg-blue-100 p-6 rounded-lg shadow-md inline-block m-4">
-                    <h3 class="text-xl font-semibold mb-2">Tel/Whatsapp</h3>
-                    <span class="text-gray-700">+228 93-59-00-67 / +228 96-98-34-53</span>
+            <div class="cord-contact mt-10 text-center">
+                <div class="box bg-blue-100 p-4 sm:p-6 rounded-lg shadow-md inline-block m-2 sm:m-4">
+                    <h3 class="text-lg sm:text-xl font-semibold mb-2">Tel/Whatsapp</h3>
+                    <span class="text-xs sm:text-sm text-gray-700">+228 93-59-00-67 / +228 96-98-34-53</span>
                 </div>
-                <div class="box2 bg-blue-100 p-6 rounded-lg shadow-md inline-block m-4">
-                    <h3 class="text-xl font-semibold mb-2">Email</h3>
-                    <span class="text-gray-700">dakshadow8@gmail.com</span>
+                <div class="box2 bg-blue-100 p-4 sm:p-6 rounded-lg shadow-md inline-block m-2 sm:m-4">
+                    <h3 class="text-lg sm:text-xl font-semibold mb-2">Email</h3>
+                    <span class="text-xs sm:text-sm text-gray-700">dakshadow8@gmail.com</span>
                 </div>
             </div>
         </div>

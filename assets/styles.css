@@ -170,3 +170,75 @@ body {
 .shadow-lg {
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
+
+/* Styles pour les petits écrans (moins de 640px) */
+@media (max-width: 639px) {
+    .timeline {
+        padding: 0;
+    }
+
+    .timeline::after {
+        display: none; /* Masquer la ligne bleue */
+    }
+
+    .event {
+        width: 100%; /* Prendre toute la largeur disponible */
+        padding: 1.5rem;
+        background-color: #f3f4f6; /* Couleur de fond grise */
+        border-radius: 0.5rem;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        margin-bottom: 1.5rem;
+    }
+
+    .event.left,
+    .event.right {
+        left: 0; /* Aligner à gauche */
+    }
+
+    .event::after {
+        display: none; /* Masquer les points sur la timeline */
+    }
+
+    .event h2 {
+        font-size: 1.25rem; /* Taille de police réduite */
+        margin-bottom: 0.5rem;
+    }
+
+    .event p {
+        font-size: 0.875rem; /* Taille de police réduite */
+        color: #4b5563; /* Couleur de texte grise */
+    }
+}
+
+/* Supprimer l'espace sur les petits écrans */
+@media (max-width: 639px) {
+    html, body {
+        overflow-x: hidden; /* Désactiver le défilement horizontal */
+    }
+
+    .container-contact, .timeline, .event, .blog-card, .hero-section {
+        max-width: 100%; /* Limiter la largeur à 100% */
+        margin: 0; /* Supprimer les marges */
+        padding: 0; /* Supprimer les paddings */
+        box-sizing: border-box; /* Inclure les paddings et bordures dans la largeur */
+    }
+
+    .event {
+        padding: 1rem; /* Réduire le padding sur les petits écrans */
+        margin: 0;
+    }
+
+    .timeline {
+        padding: 0;
+    }
+
+    .hero-section {
+        padding: 0;
+    }
+}
+
+.text-red-600 {
+    color: #dc2626; /* Couleur rouge pour les messages d'erreur */
+    font-size: 0.875rem; /* Taille de police réduite */
+    margin-top: 0.25rem; /* Espacement au-dessus du message */
+}
