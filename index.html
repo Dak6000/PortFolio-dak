@@ -457,10 +457,10 @@ footer span { color:var(--green); }
       <div class="info-card">
         <p class="section-tag" style="margin-bottom:1.2rem">envoyer un message</p>
         <form class="cform" onsubmit="sendMsg(event)">
-          <div class="fgroup"><label>Votre nom</label><input type="text" placeholder="DJADJARO Abdoul Khabirou" required/></div>
-          <div class="fgroup"><label>Email</label><input type="email" placeholder="dakshadow8@gmail.com" required/></div>
-          <div class="fgroup"><label>Sujet</label><input type="text" placeholder="Proposition de stage, projet..."/></div>
-          <div class="fgroup"><label>Message</label><textarea placeholder="Bonjour Abdoul..."></textarea></div>
+          <div class="fgroup"><label>Votre nom</label><input name="name" type="text" placeholder="DJADJARO Abdoul Khabirou" required/></div>
+          <div class="fgroup"><label>Email</label><input name="email" type="email" placeholder="dakshadow8@gmail.com" required/></div>
+          <div class="fgroup"><label>Sujet</label><input name="subject" type="text" placeholder="Proposition de stage, projet..."/></div>
+          <div class="fgroup"><label>Message</label><textarea name="message" placeholder="Bonjour Abdoul..."></textarea></div>
           <button type="submit" class="btn-send">▸ Envoyer le message</button>
         </form>
       </div>
@@ -484,9 +484,9 @@ footer span { color:var(--green); }
       <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
     </a>
   </div>
-  <p>Conçu & développé par <span>DAK-SHADOW</span> · Djadjaro Abdoul Khabirou · 2025</p>
+  <p>Conçu & développé par <span>DAK-SHADOW</span> · Djadjaro Abdoul Khabirou · 2026</p>
   <p style="margin-top:.3rem">Étudiant L3 – Sécurité Informatique & Cybersécurité · Université de Kara</p>
-  <p style="margin-top:.25rem;font-size:.62rem;opacity:.4">© 2025 DAK-SHADOW – Tous droits réservés</p>
+  <p style="margin-top:.25rem;font-size:.62rem;opacity:.4">© 2026 DAK-SHADOW – Tous droits réservés</p>
 </footer>
 
 <script>
@@ -548,9 +548,19 @@ window.addEventListener('scroll',()=>{
 
 // ── Form
 function sendMsg(e){
-  e.preventDefault();const b=e.target.querySelector('.btn-send');
-  b.textContent='✓ Message envoyé !';b.style.background='#00cc6e';
-  setTimeout(()=>{b.textContent='▸ Envoyer le message';b.style.background='';e.target.reset();},3000);
+  e.preventDefault();
+  const form = e.target;
+  const name = form.querySelector('input[name="name"]').value.trim();
+  const email = form.querySelector('input[name="email"]').value.trim();
+  const subject = form.querySelector('input[name="subject"]').value.trim() || 'Message depuis le portfolio';
+  const message = form.querySelector('textarea[name="message"]').value.trim();
+  const mailto = `mailto:dakshadow8@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Nom: ${name}\nEmail: ${email}\n\n${message}`)}`;
+  window.location.href = mailto;
+
+  const b = form.querySelector('.btn-send');
+  b.textContent = '✓ Ouverture du client mail...';
+  b.style.background = '#00cc6e';
+  setTimeout(()=>{b.textContent = '▸ Envoyer le message';b.style.background = '';form.reset();},3000);
 }
 </script>
 </body>
